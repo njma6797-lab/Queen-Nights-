@@ -5,54 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ليالي كوين</title>
 <style>
-/* الخطوط */
+/* الخط العصري */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 body {
     margin:0;
-    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Arial, sans-serif;
-    background-color: #f0f8ff; /* أبيض أزرق فاتح */
-    color:#003366; /* أزرق غامق للنص */
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "San Francisco", Arial, sans-serif;
+    background: #0a0a0a;
+    color: #e0f7fa;
     text-align:center;
 }
 
 /* الهيدر */
 header {
-    padding:15px;
-    background: #3399ff; /* أزرق فاتح */
+    padding:20px 10px 40px 10px;
     position: relative;
 }
 header img {
-    width:120px;
-    height:120px;
-    border-radius:50%; /* دائري */
+    width:100px;
+    height:100px;
+    border-radius:50%;
     object-fit: cover;
-    border: 3px solid #fff;
-}
-
-/* قائمة Menu للموبايل */
-.menu-toggle {
-    display:none;
-    position:absolute;
-    top:20px;
-    right:20px;
-    font-size:28px;
-    cursor:pointer;
-    color:white;
-}
-nav {
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-nav a {
-    text-decoration:none;
-    color:white;
-    padding:8px 12px;
-    background-color:#0059b3; /* أزرق غامق */
-    border-radius:8px;
-}
-nav a:hover {
-    background-color:#003366;
+    border: 3px solid #00e5ff;
+    box-shadow: 0 0 20px #00e5ff;
+    margin-bottom:10px;
 }
 
 /* المنتجات */
@@ -64,19 +40,21 @@ nav a:hover {
     gap:15px;
 }
 .card {
-    background:white;
-    color:#003366;
+    background: rgba(255,255,255,0.05);
+    color:#e0f7fa;
     padding:15px;
     width:220px;
     border-radius:15px;
     text-align:center;
     transition:0.3s;
-    flex: 1 1 200px;
+    flex:1 1 200px;
     max-width:250px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 229, 255,0.5);
 }
 .card:hover {
-    transform:scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00e5ff;
 }
 .card img {
     width:100%;
@@ -86,7 +64,7 @@ nav a:hover {
 
 /* الزرائر */
 button {
-    background:#3399ff;
+    background: #00e5ff;
     border:none;
     padding:10px;
     border-radius:10px;
@@ -94,10 +72,12 @@ button {
     font-weight:bold;
     width:100%;
     margin-top:10px;
-    color:white;
+    color:#000;
+    transition:0.3s;
 }
 button:hover {
-    background:#0059b3;
+    background: #00bcd4;
+    color:#fff;
 }
 
 /* الصناديق المنبثقة */
@@ -108,20 +88,30 @@ button:hover {
     left:0;
     width:100%;
     height:100%;
-    background: rgba(0,0,0,0.95);
+    background: rgba(0,0,0,0.9);
     justify-content:center;
     align-items:center;
     flex-direction:column;
     padding:20px;
     box-sizing:border-box;
+    color:#e0f7fa;
+    font-weight:bold;
+    text-shadow: 0 0 5px #00e5ff;
+    z-index:999;
 }
-input {
+.box input {
     padding:10px;
     border-radius:10px;
     border:none;
     width:80%;
     max-width:300px;
     margin-top:10px;
+    background: rgba(255,255,255,0.1);
+    color:#e0f7fa;
+    outline:none;
+}
+.box input::placeholder {
+    color:#a0f0ff;
 }
 
 /* Media Queries للشاشات الصغيرة */
@@ -139,22 +129,6 @@ input {
         width:80px;
         height:80px;
     }
-    .menu-toggle {
-        display:block;
-    }
-    nav {
-        display:none;
-        flex-direction: column;
-        background:#3399ff;
-        position:absolute;
-        top:70px;
-        right:10px;
-        padding:10px;
-        border-radius:10px;
-    }
-    nav.show {
-        display:flex;
-    }
 }
 </style>
 </head>
@@ -162,13 +136,7 @@ input {
 
 <header>
 <img src="logo.jpg" alt="ليالي كوين">
-<h2>👑 ليالي كوين 👑</h2>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-<nav id="menu">
-    <a href="#">الرئيسية</a>
-    <a href="#">منتجاتنا</a>
-    <a href="#">اتصل بنا</a>
-</nav>
+<h2 style="text-shadow:0 0 10px #00e5ff;">👑 ليالي كوين 👑</h2>
 </header>
 
 <div class="products">
@@ -342,11 +310,6 @@ function payment(){
 
 function confirmPay(){
     show('step4');
-}
-
-/* القائمة المنبثقة للموبايل */
-function toggleMenu(){
-    document.getElementById('menu').classList.toggle('show');
 }
 </script>
 
