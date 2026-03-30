@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>ليالي كوين</title>
+<style>
+body {
+    margin:0;
+    font-family: Arial;
+    background: linear-gradient(black, #1a1a1a);
+    color:white;
+    text-align:center;
+}
+header {
+    padding:15px;
+}
+header img {
+    width:120px;
+}
+.products {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+.card {
+    background:#111;
+    margin:20px;
+    padding:15px;
+    width:220px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
+}
+.card:hover {
+    transform:scale(1.05);
+}
+.card img {
+    width:100%;
+    border-radius:15px;
+}
+button {
+    background:gold;
+    border:none;
+    padding:10px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+.box {
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+input {
+    padding:10px;
+    border-radius:10px;
+    border:none;
+    width:60%;
+    margin-top:10px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<img src="logo.jpg" alt="ليالي كوين">
+<h2>👑 ليالي كوين 👑</h2>
+</header>
+
+<div class="products">
+
+<!-- 10 دينار -->
+<div class="card">
+<img src="FB_IMG_1774845414305.jpg">
+<h3>فستان ملكي 1</h3>
+<p>10 دينار أردني</p>
+<button onclick="startOrder('فستان ملكي 1')">شراء</button>
+</div>
+<div class="card">
+<img src="FB_IMG_1774845410582.jpg">
+<h3>فستان ملكي 2</h3>
+<p>10 دينار أردني</p>
+<button onclick="startOrder('فستان ملكي 2')">شراء</button>
+</div>
+<div class="card">
+<img src="FB_IMG_1774845405981.jpg">
+<h3>فستان ملكي 3</h3>
+<p>10 دينار أردني</p>
+<button onclick="startOrder('فستان ملكي 3')">شراء</button>
+</div>
+
+<!-- 15 دينار -->
+<div class="card">
+<img src="الموضه.jpg">
+<h3>لوك موضة مميز</h3>
+<p>15 دينار أردني</p>
+<button onclick="startOrder('لوك موضة مميز')">شراء</button>
+</div>
+<div class="card">
+<img src="ليالي كوين 2.png">
+<h3>تصميم ليالي كوين</h3>
+<p>15 دينار أردني</p>
+<button onclick="startOrder('تصميم ليالي كوين')">شراء</button>
+</div>
+<div class="card">
+<img src="ملابس.jpg">
+<h3>طقم أنيق</h3>
+<p>15 دينار أردني</p>
+<button onclick="startOrder('طقم أنيق')">شراء</button>
+</div>
+
+<!-- 20 دينار -->
+<div class="card">
+<img src="FB_IMG_1774843903200.jpg">
+<h3>فستان سهره 4</h3>
+<p>20 دينار أردني</p>
+<button onclick="startOrder('فستان سهره 4')">شراء</button>
+</div>
+<div class="card">
+<img src="FB_IMG_1774843895871.jpg">
+<h3>فستان سهره 5</h3>
+<p>20 دينار أردني</p>
+<button onclick="startOrder('فستان سهره 5')">شراء</button>
+</div>
+<div class="card">
+<img src="FB_IMG_1774843888531.jpg">
+<h3>فستان سهره 6</h3>
+<p>20 دينار أردني</p>
+<button onclick="startOrder('فستان سهره 6')">شراء</button>
+</div>
+<div class="card">
+<img src="FB_IMG_1774843885318.jpg">
+<h3>فستان سهره 7</h3>
+<p>20 دينار أردني</p>
+<button onclick="startOrder('فستان سهره 7')">شراء</button>
+</div>
+<div class="card">
+<img src="FB_IMG_1774843876479.jpg">
+<h3>فستان سهره 8</h3>
+<p>20 دينار أردني</p>
+<button onclick="startOrder('فستان سهره 8')">شراء</button>
+</div>
+<div class="card">
+<img src="FB_IMG_1774843873019.jpg">
+<h3>فستان سهره 9</h3>
+<p>20 دينار أردني</p>
+<button onclick="startOrder('فستان سهره 9')">شراء</button>
+</div>
+<div class="card">
+<img src="FB_IMG_1774843868972.jpg">
+<h3>فستان سهره 10</h3>
+<p>20 دينار أردني</p>
+<button onclick="startOrder('فستان سهره 10')">شراء</button>
+</div>
+<div class="card">
+<img src="FB_IMG_1774843864630.jpg">
+<h3>فستان سهره 11</h3>
+<p>20 دينار أردني</p>
+<button onclick="startOrder('فستان سهره 11')">شراء</button>
+</div>
+<div class="card">
+<img src="FB_IMG_1774843861981.jpg">
+<h3>فستان سهره 12</h3>
+<p>20 دينار أردني</p>
+<button onclick="startOrder('فستان سهره 12')">شراء</button>
+</div>
+<div class="card">
+<img src="FB_IMG_1774843829879.jpg">
+<h3>فستان سهره 13</h3>
+<p>20 دينار أردني</p>
+<button onclick="startOrder('فستان سهره 13')">شراء</button>
+</div>
+<div class="card">
+<img src="FB_IMG_1774843826306.jpg">
+<h3>فستان سهره 14</h3>
+<p>20 دينار أردني</p>
+<button onclick="startOrder('فستان سهره 14')">شراء</button>
+</div>
+
+</div>
+
+<!-- الخطوات -->
+<div id="step1" class="box">
+<h3>ادخل المقاس</h3>
+<input id="size" placeholder="مثلا M أو L">
+<br><br>
+<button onclick="nextStep()">التالي</button>
+</div>
+
+<div id="loading" class="box">
+<h3>⏳ جاري تعبئة الشحنة...</h3>
+</div>
+
+<div id="step2" class="box">
+<h3>ادخل العنوان</h3>
+<input id="address" placeholder="اكتب عنوانك">
+<br><br>
+<button onclick="payment()">التالي</button>
+</div>
+
+<div id="step3" class="box">
+<h3>💳 ادفع الآن</h3>
+<p>📞 رقم الدفع: 2001206561893</p>
+<p>طرق الدفع:</p>
+<p>ويسترن يونيون</p>
+<p>Orange Money</p>
+<p>أو توجه لأقرب سوبر ماركت للدفع</p>
+<button onclick="confirmPay()">تم الدفع</button>
+</div>
+
+<div id="step4" class="box">
+<h3>✅ تم استلام طلبك</h3>
+<p>سيتم مراجعة أن تم الدفع</p>
+<p>📞 رقم الدفع: 2001206561893</p>
+</div>
+
+<script>
+let currentProduct = "";
+
+function show(id){
+    document.querySelectorAll('.box').forEach(b=>b.style.display='none');
+    document.getElementById(id).style.display='flex';
+}
+
+function startOrder(product){
+    currentProduct = product;
+    show('step1');
+}
+
+function nextStep(){
+    show('loading');
+    setTimeout(()=>{ show('step2'); },2000);
+}
+
+function payment(){
+    show('step3');
+}
+
+function confirmPay(){
+    show('step4');
+}
+</script>
+
+</body>
+</html>
